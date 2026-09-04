@@ -9,50 +9,76 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 
 function ArticulosPage() {
   const articles = [
-    {
-      title: 'El rol del abogado ambiental en la evaluación de impacto',
-      excerpt: 'Análisis sobre la importancia del asesoramiento ambiental temprano para evitar contingencias en proyectos de gran escala y asegurar la licencia social.',
-      category: 'Derecho Ambiental',
-      date: '15 May 2026'
-    },
-    {
-      title: 'Regulación urbanística: Desafíos para desarrolladores',
-      excerpt: 'Cómo navegar las normativas municipales de zonificación y los conflictos de uso de suelo en el derecho urbanístico moderno.',
-      category: 'Derecho Urbanístico',
-      date: '02 May 2026'
-    },
-    {
-      title: 'Derecho minero y sustentabilidad: Un equilibrio necesario',
-      excerpt: 'Las nuevas exigencias de compliance ambiental en la industria extractiva y el rol del derecho minero en la transición energética.',
-      category: 'Derecho Minero',
-      date: '18 Abr 2026'
-    },
-    {
-      title: 'El derecho administrativo frente a la obra pública',
-      excerpt: 'Claves para entender los procesos licitatorios, las redeterminaciones de precios y las prerrogativas del Estado en contratos administrativos.',
-      category: 'Derecho Administrativo',
-      date: '05 Abr 2026'
-    },
-    {
-      title: 'Responsabilidad civil del abogado construcción',
-      excerpt: 'Un repaso por la jurisprudencia reciente sobre vicios ocultos, ruina y la responsabilidad compartida entre proyectistas y directores de obra.',
-      category: 'Derecho de la Construcción',
-      date: '22 Mar 2026'
-    },
-    {
-      title: 'Estudio jurídico ambiental: Prevención de daños',
-      excerpt: 'Por qué las empresas industriales necesitan auditorías legales preventivas para mitigar riesgos de derecho administrativo ambiental.',
-      category: 'Derecho Ambiental',
-      date: '10 Mar 2026'
-    }
-  ];
+  {
+    slug: 'tasa-estadistica',
+    title: 'La tasa de estadística argentina ante la reserva de ley: entre la retribución de servicios y la recaudación aduanera',
+    excerpt:
+      'Análisis sobre la validez constitucional de la tasa de estadística aplicable a las importaciones argentinas, con especial atención al incremento dispuesto por el Decreto 332/2019.',
+    category: 'Derecho Aduanero',
+    date: '01 Sep 2026'
+  }
+];
 
   return (
     <>
       <Helmet>
-        <title>Artículos y Novedades | Casanegra & Asociados</title>
-        <meta name="description" content="Lea nuestros artículos sobre abogado ambiental, derecho urbanístico, derecho minero, derecho administrativo y abogado construcción." />
-      </Helmet>
+  <title>Artículos y Publicaciones Jurídicas | Estudio Jurídico Casanegra & Asociados</title>
+
+  <meta
+    name="description"
+    content="Artículos, análisis jurídicos y publicaciones del Estudio Jurídico Casanegra & Asociados sobre derecho aduanero, administrativo, ambiental, urbanístico, minero, migratorio e inversiones."
+  />
+
+  <link
+    rel="canonical"
+    href="https://estudiocasanegra.com/articulos"
+  />
+
+  <meta
+    property="og:title"
+    content="Artículos y Publicaciones Jurídicas | Estudio Jurídico Casanegra & Asociados"
+  />
+
+  <meta
+    property="og:description"
+    content="Artículos, análisis jurídicos y publicaciones del Estudio Jurídico Casanegra & Asociados."
+  />
+
+  <meta
+    property="og:url"
+    content="https://estudiocasanegra.com/articulos"
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:site_name"
+    content="Estudio Jurídico Casanegra & Asociados"
+  />
+
+  <meta
+    property="og:locale"
+    content="es_AR"
+  />
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Artículos y Publicaciones Jurídicas | Estudio Jurídico Casanegra & Asociados"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Artículos, análisis jurídicos y publicaciones del Estudio Jurídico Casanegra & Asociados."
+  />
+</Helmet>
 
       <Header />
       <WhatsAppButton />
@@ -101,10 +127,13 @@ function ArticulosPage() {
                   <p className="text-muted-foreground leading-relaxed mb-6 flex-grow line-clamp-3">
                     {article.excerpt}
                   </p>
-                  <Link to="#" className="inline-flex items-center text-sm font-medium text-primary hover:text-secondary transition-colors mt-auto">
-                    Leer artículo completo
-                    <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
+                  <Link
+  to={`/articulos/${article.slug}`}
+  className="inline-flex items-center text-sm font-medium text-primary hover:text-secondary transition-colors mt-auto"
+>
+  Leer artículo completo
+  <ArrowRight className="ml-1 w-4 h-4" />
+</Link>
                 </div>
               </motion.div>
             ))}

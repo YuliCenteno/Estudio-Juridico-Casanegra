@@ -27,6 +27,7 @@ function Header() {
     { path: '/areas', label: 'Áreas de Práctica' },
     { path: '/ciudadanias-migratorio', label: 'Ciudadanías y Migratorio' },
     { path: '/inversiones', label: 'Inversiones' },
+    { path: '/articulos', label: 'Articulos' },
     { path: '/contacto', label: 'Contacto' }
   ];
 

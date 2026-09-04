@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,28 +9,28 @@
     --background: 210 100% 20%;
     --foreground: 0 0% 100%;
 
-    --primary: 210 100% 20%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 210 100% 20%;
 
-    --secondary: 43 67% 47%;
+    --secondary: 210 45% 30%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 43 67% 47%;
+    --accent: 210 35% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 45% 30%;
-    --muted-foreground: 0 0% 90%;
+    --muted: 210 45% 25%;
+    --muted-foreground: 0 0% 85%;
 
-    --card: 210 80% 17%;
+    --card: 210 80% 18%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 210 80% 17%;
+    --popover: 210 80% 18%;
     --popover-foreground: 0 0% 100%;
 
-    --border: 43 67% 47%;
-    --input: 210 40% 35%;
+    --border: 210 35% 35%;
+    --input: 210 35% 35%;
 
-    --ring: 43 67% 47%;
+    --ring: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 45 29% 97%;
@@ -40,16 +40,17 @@
 }
 
 .bg-cream {
-  background-color: hsl(210 100% 20%);
-  color: hsl(0 0% 100%);
+  background-color: #003566;
+  color: #ffffff;
 }
 
 .bg-warm-beige {
-  background-color: hsl(43 67% 47%);
-  color: hsl(0 0% 100%);
+  background-color: hsl(210 45% 30%);
+  color: #ffffff;
 }
 
 @layer base {
+
   * {
     @apply border-border;
   }
@@ -61,20 +62,15 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-feature-settings: 'kern' 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Playfair Display', serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     text-wrap: balance;
     letter-spacing: -0.01em;
@@ -102,6 +98,7 @@
 }
 
 @layer utilities {
+
   .text-balance {
     text-wrap: balance;
   }
