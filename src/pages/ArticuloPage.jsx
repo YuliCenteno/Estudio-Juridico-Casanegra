@@ -107,7 +107,8 @@ function ArticuloPage() {
         {/* Contenido del Artículo */}
         <section className="py-12 md:py-16">
           <div className="container-custom max-w-4xl px-4">
-            <article className="bg-card border border-border/60 rounded-2xl p-6 sm:p-10 md:p-14 shadow-xl backdrop-blur-sm space-y-6 text-foreground/90 text-base md:text-lg leading-relaxed">
+            {/* Fondo blanco (bg-white) y texto azul (text-blue-900) */}
+            <article className="bg-white border border-border/60 rounded-2xl p-6 sm:p-10 md:p-14 shadow-xl backdrop-blur-sm space-y-6 text-blue-900 text-base md:text-lg leading-relaxed">
               
               <p className="leading-relaxed">
                 1. Como señala Basaldúa[1] siempre fue de gran interés para los estados el conocimiento de las mercaderías que importan y exportan y los tributos que se perciben por dicho motivo.
@@ -140,7 +141,7 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
               </p>
 
               <div className="pt-6 border-t border-border/40">
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary mb-6 leading-snug">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
                   4.  Las Normas en crisis: Los Decretos 332/2019 (vigente hasta el 31/12/2019), 901/21 (vigente hasta el 31/12/2024) , y 1140/2024 (vigente de 31/12/2024 hasta 21/12/2027):
                 </h2>
                 
@@ -176,9 +177,13 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
                   </p>
 
                   <p className="leading-relaxed">
-                    El Decreto 1140 dictado el 30/12/2024, mediante el cual el PEN extendió la vigencia del porcentual de la tasa de estadística del 3% hasta el 31/12/2027.
+                    Como miembro de la OMC nuestro país debe dar cumplimiento a las disposiciones del GATT, no obstante, lejos de fomentar la apertura de la economía local al comercio mundial, este tipo de medidas no hace más que frustrar todo empeño por competir con economías más responsables y consecuentes con sus operadores de comercio exterior.
                   </p>
 
+                  <p className='leading-relaxed'>
+                    El Decreto 1140 dictado el 30/12/2024, mediante el cual el PEN extendió la vigencia del porcentual de la tasa de estadística del 3% hasta el 31/12/2027.
+                  </p>
+    
                   <p className="leading-relaxed">
                     Interesa destacar que la justificación del decreto PEN 1140/24 respecto a que tal prórroga se sustenta en las facultades conferidas en el inciso 1 del art. 99 de la CN, así como por los Artículos 764 y 765 del CA, se torna inconsistente toda vez que la aludida norma constitucional no destituye los alcances taxativos del inciso 3 de la misma que prohíbe terminantemente al PEN dictar normas sobre tributos. Esto último, habida cuenta que el principio de reserva legal en materia tributaria tampoco cede en caso de que se actúe mediante el mecanismo de la delegación legislativa prevista en el art. 76 de nuestra Carta Magna.
                   </p>
@@ -186,7 +191,7 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
               </div>
 
               <div className="pt-6 border-t border-border/40">
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary mb-6 leading-snug">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
                   <strong>5. Fallo Dass Argentina S.R.L.:</strong>
                 </h2>
 
@@ -282,7 +287,7 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
                     B) Al referirse a los argumentos de la actora, el voto señala que dicha parte se limitó a sostener que el pago de la tasa de estadística implicó un avasallamiento a su derecho de propiedad y que el decreto PEN 332/19 contradice las disposiciones del GATT, agregando asimismo que el servicio prestado como tasa no se condice con el costo que el mismo implica.
                   </p>
 
-                  <p className="leading-relaxed italic bg-muted/30 p-4 rounded-lg border-l-2 border-muted-foreground/30">
+                  <p className="leading-relaxed italic bg-blue-50/50 p-4 rounded-lg border-l-2 border-blue-300">
                     <strong><em>C) Al respecto la actora sólo ofreció y acompañó como prueba los despachos de importación para consumo oficializados de los cuales surge el pago cuestionado, en que su línea argumental adolece de solidez suficiente para habilitar un examen acerca de la razonabilidad del aumento de la alícuota de la tasa de estadística en función de la prestación del servicio efectivamente proporcionado. Sucede, prosigue el voto, que no se aportan datos que permitan evaluar el aspecto económico involucrado.</em></strong>
                   </p>
 
@@ -301,7 +306,7 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
               </div>
 
               <div className="pt-6 border-t border-border/40">
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary mb-6 leading-snug">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
                   <strong>6: Fallo Colgate Palmolive:</strong>
                 </h2>
 
@@ -338,90 +343,88 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
               </div>
 
               <div className="pt-6 border-t border-border/40">
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary mb-6 leading-snug">
-                  8. Sport Icon c/ ARCA - DGA [10]: La inconveniencia del planteo de medidas Cautelares: 
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
+                  <strong>7. Sport Icon c/ ARCA - DGA [10]: La inconveniencia del planteo de medidas Cautelares:</strong>
                 </h2>
-
                 <div className="space-y-6">
                   <p className="leading-relaxed">
                     En la causa "Sport Icon”6, la Sala V de la CNACAF confirmó recientemente el rechazo de una medida cautelar interpuesta contra el Decreto 1140/2024, que prorrogó la alícuota del 3% de la tasa de estadística hasta el 31/12/2027.
                   </p>
-
                   <p className="leading-relaxed">
-                    Este pronunciamiento intermedio denegó la medida cautelar solicitada por el importador basándose en que el examen de la verosimilitud del derecho exige indagar sobre la constitucionalidad del régimen —lo cual excede el instituto cautelar y amenazaba con confundirse con el objeto principal de la demanda de fondo resulta evidente que el debate de fondo respecto de la validez constitucional de las prórrogas por Decreto de la tasa de estadística, sin una ley formal que otorgue rango legal a los sucesivos incrementos dispuestos, sigue plenamente vigente. 
+                    Este pronunciamiento intermedio denegó la medida cautelar solicitada por el importador basándose en que <strong>el examen de la verosimilitud del derecho exige indagar sobre la constitucionalidad del régimen —lo cual excede el instituto cautelar y amenazaba con confundirse con el objeto principal de la demanda de fondo resulta evidente que el debate de fondo respecto de la validez constitucional de las prórrogas por Decreto de la tasa de estadística, sin una ley formal que otorgue rango legal a los sucesivos incrementos dispuestos, sigue plenamente vigente.</strong>
                   </p>
                 </div>
               </div>
 
               <div className="pt-6 border-t border-border/40">
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary mb-6 leading-snug">
-                  9.  Acción Declarativa de Inconstitucionalidad como vía idónea:
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
+                  <strong>8.  Acción Declarativa de Inconstitucionalidad como vía idónea:</strong>
                 </h2>
-
                 <div className="space-y-6">
                   <p className="leading-relaxed">
                     La acción declarativa de inconstitucionalidad es la vía para plantear directamente la inconstitucionalidad de los Decretos  N° 1057/20, y N° 901/2, y N° 1140/24, debiendo ampliar la demanda luego de la admisión de la misma solicitando se condene al Estado Nacional a restituir los tributos percibidos ilegítimamente, desde enero del año 2021 hasta el día de la fecha, y lo posterior a esta demanda, en materia de exceso en el cobro de la tasa estadística que haya superado la alícuota del cero coma cinco por ciento (0,5 %), más intereses, debiendo aplicar la tasa pasiva promedio que publica el Banco Central de la República Argentina, más costas.
                   </p>
-
                   <p className="leading-relaxed">
                     El planteo por esta vía evita la dilación que demandaría el procedimiento administrativo previo, y el agotamiento de la vía para lograr que se habilite la instancia contencioso administrativa.
                   </p>
-
                   <p className="leading-relaxed">
-                    No deben  plantearse con la demanda medidas cautelares que tengan identidad parcial o total con el fondo de la acción (declaración de inconstitucionalidad), porque no están dados los requisitos legales para plantearlas. 
+                    No deben  plantearse con la demanda medidas cautelares que tengan identidad parcial o total con el fondo de la acción (declaración de inconstitucionalidad), porque no están dados los requisitos legales para plantearlas.
+                  </p>
+                  <p className="leading-relaxed">
+                    Y acá aparece la pregunta que más le interesa a cualquier importador: ¿cómo se recupera efectivamente ese dinero? No se trata de una devolución en saldo a favor dentro del Sistema Malvina. Lo que determina la Justicia se acredita  en una cuenta judicial del Banco Nación con depósito en Aduana, que posteriormente puede transferirse a la cuenta utilizada por el importador.
+                  </p>
+                  <p className="leading-relaxed">
+                    La jurisprudencia aplica indexación sobre los montos a devolver, pero el ajuste resulta bajo en relación a la inflación acumulada desde 2019. Es un dato relevante para quien evalúe la ecuación económica del litigio. Por eso, ya hay estudios reclamando también sobre la cuestión de los intereses.
+                  </p>
+                  <p className="leading-relaxed">
+                    Desde 2022, la jurisprudencia que ordena devoluciones se ha ido consolidando. Sin embargo, los primeros casos tardaron considerablemente en resolverse. Las medidas cautelares para evitar el pago futuro no están prosperando actualmente, por lo que la vía más efectiva es la acción de repetición: reclamar lo ya pagado.
                   </p>
                 </div>
               </div>
 
               <div className="pt-6 border-t border-border/40">
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary mb-6 leading-snug">
-                  <strong>10. Aspectos Probatorios:</strong>
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
+                  <strong>9. Aspectos Probatorios:</strong>
                 </h2>
 
                 <div className="space-y-6">
                   <p className="leading-relaxed">
                     La prueba debe distribuirse de manera compatible con la disponibilidad de la información. El importador puede acreditar los despachos, los montos pagados y la incidencia del porcentaje sobre sus operaciones; en cambio, la estructura de costos, la asignación presupuestaria y el destino de la recaudación se encuentran principalmente bajo control estatal. Exigir al particular una demostración acabada de datos que la Administración no pública podría tornar ilusorio el control judicial. Resulta más equilibrado imponer al actor la formulación de un agravio concreto y, una vez superado ese umbral, requerir al Estado que justifique técnicamente la proporcionalidad del gravamen.
                   </p>
-
-                  <p className="leading-relaxed italic bg-muted/30 p-4 rounded-lg border-l-2 border-primary/40">
-                    En la disidencia del fallo Dass S.R.L. se expresa que: “<strong><em>…la actora sólo ofreció y acompañó como prueba los despachos de importación para consumo oficializados de los cuales surge el pago cuestionado, en que su línea argumental adolece de solidez suficiente para habilitar un examen acerca de la razonabilidad del aumento de la alícuota de la tasa de estadística en función de la prestación del servicio efectivamente proporcionado. Sucede, prosigue el voto, que no se aportan datos que permitan evaluar el aspecto económico involucrado</em></strong>
+                  <p className="leading-relaxed">
+                    En la disidencia del fallo Dass S.R.L. se expresa que: <strong>“…la actora sólo ofreció y acompañó como prueba los despachos de importación para consumo oficializados de los cuales surge el pago cuestionado, en que su línea argumental adolece de solidez suficiente para habilitar un examen acerca de la razonabilidad del aumento de la alícuota de la tasa de estadística en función de la prestación del servicio efectivamente proporcionado. Sucede, prosigue el voto, que no se aportan datos que permitan evaluar el aspecto económico involucrado</strong>
                   </p>
-
                   <p className="leading-relaxed">
                     Quien impugna debe individualizar los pagos y, cuando su argumento exceda la ausencia de ley formal, aportar elementos que permitan evaluar la desproporción económica.
                   </p>
-
                   <p className="leading-relaxed">
                     La solución más consistente exige separar entre los despachos correspondientes a cada decreto de manera cronológica.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-8 border-t border-border/40">
-                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary mb-6 leading-snug">
-                  11.  Conclusión:
+              <div className="pt-6 border-t border-border/40">
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
+                  <strong>10: Conclusión:</strong>
                 </h2>
 
-                <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
-                  <p className="leading-relaxed font-medium text-foreground">
+                <div className="space-y-6">
+                  <p className="leading-relaxed">
                     Considero viable la presentación de acciones declarativas de inconstitucionalidad solicitando la inconstitucionalidad de los decretos N° 1057/20, y N° 901/2, y N° 1140/24, y la posterior ampliación de la demanda solicitando la restitución de lo abonado en exceso, más intereses y costas.
                   </p>
-
-                  <div className="pt-4 border-t border-primary/10">
-                    <p className="leading-relaxed text-foreground/90">
-                      Existen razones para litigar en estos casos por el gravámen y perjuicio económico que ocasionó, ocasiona, y ocasionará a las empresas importadoras el pago excesivo en materia de tasa estadística, por la violación expresa del principio de legalidad en materia tributaria, contando con dos fallos de Cámaras Federales favorables.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Existen razones para litigar en estos casos por el gravámen y perjuicio económico que ocasionó, ocasiona, y ocasionará a las empresas importadoras el pago excesivo en materia de tasa estadística, por la violación expresa del principio de legalidad en materia tributaria, contando con dos fallos de Cámaras Federales favorables.
+                  </p>
                 </div>
               </div>
 
               {/* Separador */}
-              <div className="py-4 text-center text-muted-foreground/40 font-mono tracking-widest">
+              <div className="py-4 text-center text-blue-300 font-mono tracking-widest">
                 ---
               </div>
 
               {/* Citas y Referencias */}
-              <div className="pt-6 border-t border-border/40 text-xs md:text-sm text-muted-foreground space-y-3 font-mono leading-relaxed bg-muted/20 p-6 rounded-xl">
+              <div className="pt-6 border-t border-border/40 text-xs md:text-sm text-blue-800 space-y-3 font-mono leading-relaxed bg-blue-50/60 p-6 rounded-xl">
                 <p>
                   [1] Con cita a Aristóteles Basaldúa, Xavier, Tributos al Comercio Exterior, Segunda Edición Ampliada y Actualizada, con prólogo De Guillermo Pablo Galli, título IV, página 405.
                 </p>
@@ -455,19 +458,19 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
 
               {/* Pie de Artículo */}
               <section className="mt-8 pt-6 border-t border-border/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Fuente:</strong>{' '}
+                <p className="text-sm text-blue-900">
+                  <strong className="text-blue-950">Fuente:</strong>{' '}
                   <a
                     href="https://share.google/cVCpSKBEHZ1yctTIH"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 transition-colors underline font-medium"
+                    className="text-blue-600 hover:text-blue-800 transition-colors underline font-medium"
                   >
                     Aduana News
                   </a>
                 </p>
 
-                <p className="text-xs text-muted-foreground/70 italic">
+                <p className="text-xs text-blue-800/70 italic">
                   El presente artículo tiene carácter informativo y no constituye asesoramiento jurídico.
                 </p>
               </section>
