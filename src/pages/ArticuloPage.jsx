@@ -407,7 +407,6 @@ La Constitución Nacional atribuye al Congreso la imposición de contribuciones 
                 <h2 className="font-serif text-2xl md:text-3xl font-semibold text-blue-900 mb-6 leading-snug">
                   <strong>10: Conclusión:</strong>
                 </h2>
-
                 <div className="space-y-6">
                   <p className="leading-relaxed">
                     Considero viable la presentación de acciones declarativas de inconstitucionalidad solicitando la inconstitucionalidad de los decretos N° 1057/20, y N° 901/2, y N° 1140/24, y la posterior ampliación de la demanda solicitando la restitución de lo abonado en exceso, más intereses y costas.
