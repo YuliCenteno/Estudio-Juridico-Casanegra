@@ -374,10 +374,17 @@ export default defineConfig({
 	},
 	customLogger: logger,
 	plugins: [
-		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), iframeRouteRestorationPlugin(), sitePagesPlugin(), pocketbaseAuthPlugin(), sessionJournalPlugin()] : []),
-		react(),
-		addTransformIndexHtml
-	],
+    ...(isDev ? [
+        inlineEditPlugin(),
+        editModeDevPlugin(),
+        iframeRouteRestorationPlugin(),
+        sitePagesPlugin(),
+        pocketbaseAuthPlugin(),
+        sessionJournalPlugin(),
+        addTransformIndexHtml // <--- Ahora solo se inyecta durante desarrollo
+    ] : []),
+    react(),
+],
 	server: {
 		port: 3000,
 		cors: { origin: AllowedEditorOrigins },
