@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { 
   Building2, Leaf, Shovel as Pickaxe, Map, 
-  TrendingUp, Globe2, Calculator, Users, Scale, Wallet, Briefcase, Ship 
+  TrendingUp, Globe2, Calculator, Users, Scale, Wallet, Briefcase, Ship,
+  ShoppingBag, Handshake
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -99,18 +100,30 @@ function AreasPage() {
       title: 'Derecho Aduanero',
       icon: Ship,
       description: 'Asesoramiento integral en materia de comercio exterior y normativa aduanera. Asistencia en importaciones y exportaciones, clasificación arancelaria, valoración de mercaderías, régimen de infracciones y procedimientos ante la autoridad aduanera. Defensa y representación en sumarios, controversias y reclamos vinculados con operaciones de comercio internacional.',
+    },
+    {
+      id: 'derecho-del-consumo',
+      title: 'Derecho del Consumo',
+      icon: ShoppingBag,
+      description: 'Asesoramiento y defensa integral en relaciones de consumo. Patrocinio en reclamos individuales y colectivos, denuncias ante organismos de defensa del consumidor y adecuación de prácticas comerciales a la normativa vigente.',
+    },
+    {
+      id: 'lealtad-comercial',
+      title: 'Lealtad Comercial',
+      icon: Handshake,
+      description: 'Asistencia técnica en competencia desleal, publicidad engañosa, etiquetado y promociones. Defensa y compliance preventivo para garantizar prácticas de mercado transparentes y ajustadas a derecho.',
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Areas de Practica | Estudio Juridico Casanegra</title>
-        <meta name="description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal y penal en Córdoba." />
+        <title>Áreas de Práctica | Estudio Jurídico Casanegra</title>
+        <meta name="description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal, penal, del consumo y lealtad comercial en Córdoba." />
         <link rel="canonical" href="https://estudiocasanegra.com/areas-practica" />
         
         <meta property="og:title" content="Áreas de Práctica | Estudio Jurídico Casanegra" />
-        <meta property="og:description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal y penal en Córdoba." />
+        <meta property="og:description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal, penal, del consumo y lealtad comercial en Córdoba." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1558052643-9a9e9ea8e50a?q=80&w=2000&auto=format&fit=crop" />
         <meta property="og:url" content="https://estudiocasanegra.com/areas-practica" />
         <meta property="og:type" content="website" />
@@ -119,7 +132,7 @@ function AreasPage() {
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Áreas de Práctica | Estudio Jurídico Casanegra" />
-        <meta name="twitter:description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal y penal en Córdoba." />
+        <meta name="twitter:description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal, penal, del consumo y lealtad comercial en Córdoba." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1558052643-9a9e9ea8e50a?q=80&w=2000&auto=format&fit=crop" />
       </Helmet>
 
@@ -138,9 +151,9 @@ function AreasPage() {
               <span className="inline-block py-1 px-4 rounded-full bg-secondary/10 text-primary font-medium text-xs tracking-widest uppercase mb-6 border border-secondary/20">
                 Expertise Legal
               </span>
-              <h1 className="mb-6 text-primary font-serif">Areas de Practica</h1>
+              <h1 className="mb-6 text-primary font-serif">Áreas de Práctica</h1>
               <p className="text-xl text-muted-foreground leading-relaxed font-light">
-                Desarrollamos estrategias juridicas solidas respaldadas por una profunda especializacion en sectores clave para el desarrollo empresarial y personal.
+                Desarrollamos estrategias jurídicas sólidas respaldadas por una profunda especialización en sectores clave para el desarrollo empresarial y personal.
               </p>
             </motion.div>
           </div>

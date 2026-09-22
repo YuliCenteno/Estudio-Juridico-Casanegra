@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Building2, Leaf, Map, Globe2, Landmark, TrendingUp, ArrowRight, Users, Wallet, Briefcase, Scale, Ship 
+  Building2, Leaf, Handshake, Map, Award, ShoppingBag, Globe2, Landmark, TrendingUp, ArrowRight, Users, Wallet, Briefcase, Scale, Ship 
 } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -23,6 +23,8 @@ function HomePage() {
     { icon: Briefcase, title: 'Derecho Concursal', link: '/areas#derecho-concursal' },
     { icon: Scale, title: 'Derecho Penal', link: '/areas#derecho-penal' },
     { icon: Ship, title: 'Derecho Aduanero', link: '/areas#derecho-aduanero' },
+    { icon: ShoppingBag, title: 'Derecho del Consumo', link: '/areas#derecho-del-consumo' },
+    { icon: Handshake, title: 'Lealtad Comercial', link: '/areas#lealtad-comercial' },
   ];
 
   const jsonLd = {

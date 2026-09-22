@@ -49,25 +49,28 @@ function InvestorPage() {
       <WhatsAppButton />
 
       <main>
-        <section className="relative min-h-[65vh] md:min-h-[75vh] flex items-center pt-32 pb-20 md:pb-32 overflow-hidden">
-          <div className="absolute inset-0 z-0 bg-background">
+        <section className="relative min-h-[65vh] md:min-h-[75vh] flex items-center pt-32 pb-20 md:pb-32 overflow-hidden bg-slate-950">
+          <div className="absolute inset-0 z-0">
             <img 
               src="https://horizons-cdn.hostinger.com/1d193b2b-0df5-4200-8ea5-f973af13e9b4/torowallstreet-I2c5U.png" 
               alt="Fideicomisos e inversiones extranjeras - Asesoramiento especializado en derecho del inversor" 
-              className="w-full h-full object-cover object-[center_20%] md:object-center opacity-80" 
+              className="w-full h-full object-cover object-[center_20%] md:object-center opacity-60" 
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40 mix-blend-multiply" />
+            {/* Overlay oscuro para garantizar alto contraste */}
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/75 to-slate-900/50" />
           </div>
           
-          <div className="container-custom relative z-10 text-primary-foreground">
+          <div className="container-custom relative z-10 text-white">
             <motion.div 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.6 }} 
               className="max-w-3xl mt-12 md:mt-0"
             >
-              <h1 className="mb-6 font-serif text-balance">Derecho del Inversor e Inversiones</h1>
-              <p className="text-lg md:text-xl opacity-90 leading-relaxed font-light text-balance">
+              <h1 className="mb-6 font-serif text-balance text-white text-4xl md:text-5xl font-bold tracking-tight drop-shadow-md">
+                Derecho del Inversor e Inversiones
+              </h1>
+              <p className="text-lg md:text-xl text-slate-100 leading-relaxed font-light text-balance drop-shadow">
                 Orientado a empresas, desarrolladores e inversores que buscan seguridad jurídica y optimización estructural en sus negocios.
               </p>
             </motion.div>
