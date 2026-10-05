@@ -13,6 +13,7 @@ import ContactPage from './pages/ContactPage';
 import NosotrosPage from './pages/NosotrosPage';
 import ArticulosPage from './pages/ArticulosPage';
 import ArticuloPage from './pages/ArticuloPage';
+import CiudadaniaInversionPage from './pages/CiudadaniaInversionPage';
 
 // Component to handle hash scrolling on route change
 function ScrollToHashElement() {
@@ -77,6 +78,10 @@ function App() {
         <Route path="/areas" element={<AreasPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/ciudadanias-migratorio" element={<CitizenshipsAndMigrationPage />} />
+        <Route
+  path="/ciudadania-argentina-por-inversion"
+  element={<CiudadaniaInversionPage />}
+/>
         <Route path="/inversiones" element={<InvestorPage />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/articulos" element={<ArticulosPage />} />

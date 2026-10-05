@@ -115,6 +115,42 @@ function HomePage() {
                 Ver todas las áreas de práctica
               </Link>
             </div>
+            <section className="mt-20">
+  <div className="max-w-6xl mx-auto">
+    <div className="relative overflow-hidden rounded-2xl bg-card p-8 md:p-12 shadow-sm border border-border/50">
+      
+      <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3" />
+
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center">
+        <div>
+          <span className="inline-block text-xs md:text-sm tracking-[0.2em] uppercase text-white/70 font-medium mb-4">
+            Servicio especializado
+          </span>
+
+          <h2 className="font-serif text-white mb-4">
+            Ciudadanía Argentina por Inversión
+          </h2>
+
+          <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-3xl font-light">
+            Asesoramiento jurídico especializado para quienes buscan acceder a la ciudadanía argentina mediante inversión.
+          </p>
+        </div>
+
+        <div>
+          <Link
+            to="/ciudadania-argentina-por-inversion"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-primary-foreground font-medium hover:bg-white/90 transition-colors whitespace-nowrap"
+          >
+            Conocer más
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
           </div>
         </section>
 
