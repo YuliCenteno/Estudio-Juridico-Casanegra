@@ -10,6 +10,15 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 function ArticulosPage() {
   const articles = [
     {
+  slug: '/defensa-del-consumidor',
+  isCustomLink: true,
+  title: 'Defensa del Consumidor y Usuarios: Aspectos Clave y Protección Jurídica',
+  excerpt:
+    'Guía informativa y normativa sobre la protección de los derechos de consumidores y usuarios frente a incumplimientos comerciales y contratos abusivos.',
+  category: 'Derecho del Consumidor',
+  date: '05 Oct 2026'
+},
+    {
       slug: '/ciudadania-argentina-por-inversion',
       isCustomLink: true,
       title: 'Ciudadanía Argentina por Inversión en Córdoba: Modalidades, Requisitos y Evaluación',
