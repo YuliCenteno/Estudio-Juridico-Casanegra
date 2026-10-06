@@ -147,13 +147,12 @@ function CiudadaniaInversionPage() {
               <h1 className="text-primary font-serif mb-6 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                 Ciudadanía Argentina{' '}
                 <br className="hidden sm:block" />
-                por Inversión en Córdoba
+                por Inversión
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
                 Asesoramiento jurídico en Córdoba sobre el nuevo régimen de
-                ciudadanía argentina mediante inversión, previsto para recibir
-                solicitudes durante el último trimestre de 2026.
+                ciudadanía argentina mediante inversión.
               </p>
             </motion.div>
           </div>
