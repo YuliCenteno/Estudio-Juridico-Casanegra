@@ -120,12 +120,12 @@ function AreasPage() {
       <Helmet>
         <title>Áreas de Práctica | Estudio Jurídico Casanegra</title>
         <meta name="description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal, penal, del consumo y lealtad comercial en Córdoba." />
-        <link rel="canonical" href="https://estudiocasanegra.com/areas-practica" />
+        <link rel="canonical" href="https://estudiocasanegra.com/areas" />
         
         <meta property="og:title" content="Áreas de Práctica | Estudio Jurídico Casanegra" />
         <meta property="og:description" content="Áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías, tributario, societario, concursal, penal, del consumo y lealtad comercial en Córdoba." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1558052643-9a9e9ea8e50a?q=80&w=2000&auto=format&fit=crop" />
-        <meta property="og:url" content="https://estudiocasanegra.com/areas-practica" />
+        <meta property="og:url" content="https://estudiocasanegra.com/areas" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Estudio Jurídico Casanegra & Asociados" />
         <meta property="og:locale" content="es_AR" />

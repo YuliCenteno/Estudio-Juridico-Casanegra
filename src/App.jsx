@@ -15,6 +15,12 @@ import ArticulosPage from './pages/ArticulosPage';
 import ArticuloPage from './pages/ArticuloPage';
 import CiudadaniaInversionPage from './pages/CiudadaniaInversionPage';
 import DefensaConsumidorPage from './pages/DefensaConsumidorPage';
+import BambooDefiPage from './pages/BambooDefiPage';
+import AmparoFecundacionInVitroPage from './pages/AmparoFecundacionInVitroPage';
+import FakeNews from './pages/FakeNews';
+import ZurkoProvinciaARTPage from './pages/ZurkoProvinciaARTPage';
+import FalloAlianzaFrenteCivicoPage from './pages/FalloAlianzaFrenteCivicoPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 // Component to handle hash scrolling on route change
 function ScrollToHashElement() {
@@ -60,6 +66,7 @@ function App() {
       document.removeEventListener('touchstart', startAudio);
     };
   }, []);
+
   return (
     <Router>
       <audio
@@ -70,32 +77,56 @@ function App() {
       />
       <ScrollToTop />
       <ScrollToHashElement />
-      <Toaster position="top-right" richColors toastOptions={{
-        style: { fontFamily: 'Poppins, sans-serif' }
-      }}/>
+      <Toaster
+        position="top-right"
+        richColors
+        toastOptions={{
+          style: { fontFamily: 'Poppins, sans-serif' }
+        }}
+      />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/nosotros" element={<NosotrosPage />} />
         <Route path="/areas" element={<AreasPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/ciudadanias-migratorio" element={<CitizenshipsAndMigrationPage />} />
-        <Route
-  path="/ciudadania-argentina-por-inversion"
-  element={<CiudadaniaInversionPage />}
-/>
+        <Route path="/ciudadania-argentina-por-inversion" element={<CiudadaniaInversionPage />} />
         <Route path="/inversiones" element={<InvestorPage />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/articulos" element={<ArticulosPage />} />
-        <Route path="/articulos/:slug" element={<ArticuloPage />} />
+        <Route
+          path="/articulos/zurko-provincia-art-regulacion-honorarios"
+          element={<ZurkoProvinciaARTPage />}
+        />
+        <Route
+          path="/articulos/amparo-cobertura-fecundacion-in-vitro"
+          element={<AmparoFecundacionInVitroPage />}
+        />
+        <Route
+          path="/articulos/fake-news-responsabilidad-medios-buscadores-redes"
+          element={<FakeNews />}
+        />
+        <Route path="/articulos/bamboo-defi" element={<BambooDefiPage />} />
+        <Route
+          path="/articulos/fallo-alianza-frente-civico-instituciones-democraticas"
+          element={<FalloAlianzaFrenteCivicoPage />}
+        />
+
+        {/* Landing Principal de Defensa del Consumidor */}
         <Route path="/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
         
-        {/* Redirects for old routes */}
+        {/* Captura genérica de artículos */}
+        <Route path="/articulos/:slug" element={<ArticuloPage />} />
+
+        {/* Redirects para URLs antiguas */}
         <Route path="/ciudadanias" element={<Navigate to="/ciudadanias-migratorio#ciudadanias-extranjeras" replace />} />
         <Route path="/migratorio" element={<Navigate to="/ciudadanias-migratorio#derecho-migratorio" replace />} />
         <Route path="/sobre-nosotros" element={<Navigate to="/nosotros" replace />} />
+        <Route path="/articulos/casanegra-c-luxury-travel-corp" element={<Navigate to="/defensa-del-consumidor" replace />} />
+        <Route path="/areas-practica" element={<Navigate to="/areas" replace />} />
+        <Route path="/derecho-inversor" element={<Navigate to="/inversiones" replace />} />
         
-        {/* Catch-all route */}
-        <Route path="*" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

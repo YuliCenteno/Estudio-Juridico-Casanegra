@@ -34,6 +34,10 @@ function ArticuloPage() {
         />
 
         <meta
+          property="og:image"
+          content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif"
+        />
+        <meta
           property="og:url"
           content="https://estudiocasanegra.com/articulos/tasa-estadistica"
         />
@@ -54,6 +58,10 @@ function ArticuloPage() {
         <meta
           name="twitter:description"
           content="Entre la retribución de servicios y la recaudación aduanera."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif"
         />
       </Helmet>
 

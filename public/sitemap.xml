@@ -2,48 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://estudiocasanegra.com/</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://estudiocasanegra.com/nosotros</loc>
     <lastmod>2026-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
   </url>
   <url>
     <loc>https://estudiocasanegra.com/areas</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://estudiocasanegra.com/services</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://estudiocasanegra.com/ciudadanias-migratorio</loc>
     <lastmod>2026-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
   </url>
   <url>
     <loc>https://estudiocasanegra.com/ciudadania-argentina-por-inversion</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://estudiocasanegra.com/inversiones</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://estudiocasanegra.com/contacto</loc>
     <lastmod>2026-08-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/defensa-del-consumidor</loc>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/articulos</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/articulos/tasa-estadistica</loc>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/articulos/fallo-alianza-frente-civico-instituciones-democraticas</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/articulos/zurko-provincia-art-regulacion-honorarios</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/articulos/fake-news-responsabilidad-medios-buscadores-redes</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/articulos/amparo-cobertura-fecundacion-in-vitro</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://estudiocasanegra.com/articulos/bamboo-defi</loc>
+    <lastmod>2026-10-20</lastmod>
   </url>
 </urlset>

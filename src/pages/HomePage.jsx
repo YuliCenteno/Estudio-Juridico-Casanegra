@@ -27,42 +27,15 @@ function HomePage() {
     { icon: Handshake, title: 'Lealtad Comercial', link: '/areas#lealtad-comercial' },
   ];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Estudio Jurídico Casanegra & Asociados",
-    "url": "https://estudiocasanegra.com",
-    "logo": "https://estudiocasanegra.com/logo.png",
-    "image": "https://estudiocasanegra.com/imagen-corporativa.png",
-    "description": "Estudio Jurídico especializado en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías e inversiones",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "José Gigena 2058",
-      "addressLocality": "Cerro de las Rosas",
-      "addressRegion": "Córdoba",
-      "postalCode": "5000",
-      "addressCountry": "AR"
-    },
-    "telephone": "+54 351 650 6222",
-    "email": "contacto@estudiocasanegra.com",
-    "areaServed": "AR",
-    "sameAs": [
-      "https://www.instagram.com/estudio_casanegra",
-      "https://www.facebook.com/estcasanegra",
-      "https://www.linkedin.com/in/francisco-casanegra-610413191/"
-    ],
-    "priceRange": "$$"
-  };
-
   return (
     <>
       <Helmet>
-        <title>Estudio Jurídico Casanegra & Asociados | Abogados Especializados en Córdoba</title>
-        <meta name="description" content="Estudio Jurídico Casanegra & Asociados brinda asesoramiento especializado en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías e inversiones en Córdoba, Argentina." />
+        <title>Abogados en Córdoba | Estudio Jurídico Casanegra</title>
+        <meta name="description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanía por inversión y derecho del inversor." />
         <link rel="canonical" href="https://estudiocasanegra.com/" />
         
-        <meta property="og:title" content="Estudio Jurídico Casanegra & Asociados | Abogados Especializados en Córdoba" />
-        <meta property="og:description" content="Estudio Jurídico Casanegra & Asociados brinda asesoramiento especializado en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías e inversiones en Córdoba, Argentina." />
+        <meta property="og:title" content="Abogados en Córdoba | Estudio Jurídico Casanegra & Asociados" />
+        <meta property="og:description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanía por inversión y derecho del inversor." />
         <meta property="og:image" content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif" />
         <meta property="og:url" content="https://estudiocasanegra.com/" />
         <meta property="og:type" content="website" />
@@ -70,13 +43,10 @@ function HomePage() {
         <meta property="og:locale" content="es_AR" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Estudio Jurídico Casanegra & Asociados | Abogados Especializados en Córdoba" />
-        <meta name="twitter:description" content="Estudio Jurídico Casanegra & Asociados brinda asesoramiento especializado en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanías e inversiones en Córdoba, Argentina." />
+        <meta name="twitter:title" content="Abogados en Córdoba | Estudio Jurídico Casanegra & Asociados" />
+        <meta name="twitter:description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanía por inversión y derecho del inversor." />
         <meta name="twitter:image" content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif" />
         
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
       </Helmet>
 
       <Header />

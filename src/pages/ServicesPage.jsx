@@ -49,8 +49,20 @@ function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Servicios Legales | Casanegra & Asociados</title>
-        <meta name="description" content="Servicios legales premium: Consultas, dictámenes, mediaciones, reclamos y litigios." />
+        <title>Servicios Jurídicos en Córdoba | Estudio Jurídico Casanegra</title>
+        <meta name="description" content="Asesoramiento jurídico preventivo y representación en Córdoba: consultas, dictámenes, mediaciones, reclamos, recursos administrativos y acciones judiciales." />
+        <link rel="canonical" href="https://estudiocasanegra.com/services" />
+        <meta property="og:title" content="Servicios Jurídicos en Córdoba | Estudio Jurídico Casanegra" />
+        <meta property="og:description" content="Asesoramiento jurídico preventivo y representación en Córdoba: consultas, dictámenes, mediaciones, reclamos, recursos administrativos y acciones judiciales." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1558052643-9a9e9ea8e50a?q=80&w=2000&auto=format&fit=crop" />
+        <meta property="og:url" content="https://estudiocasanegra.com/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Estudio Jurídico Casanegra & Asociados" />
+        <meta property="og:locale" content="es_AR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Servicios Jurídicos en Córdoba | Estudio Jurídico Casanegra" />
+        <meta name="twitter:description" content="Asesoramiento jurídico preventivo y representación en Córdoba: consultas, dictámenes, mediaciones, reclamos, recursos administrativos y acciones judiciales." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1558052643-9a9e9ea8e50a?q=80&w=2000&auto=format&fit=crop" />
       </Helmet>
 
       <Header />

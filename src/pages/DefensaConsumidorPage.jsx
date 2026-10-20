@@ -1,13 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { ShieldCheck, FileText, ArrowRight, ExternalLink } from 'lucide-react';
+import { ShieldCheck, FileText, ArrowRight, ExternalLink, Gavel, Scale } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 function DefensaConsumidorPage() {
-  const driveUrl = "https://share.google/lH1yaWCo5BCF3kaLb";
+  const driveUrl = "https://drive.google.com/file/d/10Mv51lVBB9Y4r_zMgk3OB7WD7Er7INmU/view?usp=sharing";
 
   return (
     <>
@@ -20,8 +20,15 @@ function DefensaConsumidorPage() {
         <link rel="canonical" href="https://estudiocasanegra.com/defensa-del-consumidor" />
         <meta property="og:title" content="Abogados de Defensa del Consumidor | Estudio Jurídico Casanegra" />
         <meta property="og:description" content="Protección jurídica para consumidores y usuarios ante abusos comerciales y contractuales." />
+        <meta property="og:image" content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif" />
         <meta property="og:url" content="https://estudiocasanegra.com/defensa-del-consumidor" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Estudio Jurídico Casanegra & Asociados" />
+        <meta property="og:locale" content="es_AR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Abogados de Defensa del Consumidor | Estudio Jurídico Casanegra" />
+        <meta name="twitter:description" content="Protección jurídica para consumidores y usuarios ante abusos comerciales y contractuales." />
+        <meta name="twitter:image" content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif" />
       </Helmet>
 
       <Header />
@@ -62,10 +69,34 @@ function DefensaConsumidorPage() {
               </p>
             </div>
 
-            {/* Tarjeta del Enlace */}
+            {/* SECCIÓN DESTACADA: CASO DE ÉXITO / JURISPRUDENCIA */}
+            <div className="p-6 md:p-8 bg-card border border-emerald-500/30 rounded-2xl shadow-lg relative overflow-hidden">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-xl shrink-0">
+                  <Gavel className="w-6 h-6" />
+                </div>
+                <div className="flex-1">
+                  <span className="text-xs font-semibold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full inline-block mb-3">
+                    Antecedente Judicial / Caso de Éxito
+                  </span>
+                  <h3 className="text-xl font-bold text-foreground mb-2 font-sans">
+                    Fallo Favorable por Incumplimiento Contractual y Daños en Servicio Turístico
+                  </h3>
+                  <p className="text-sm text-slate-300 mb-4 font-normal leading-relaxed">
+                    El Estudio Jurídico Casanegra obtuvo sentencia condenatoria (Sentencia N° 192) dictada por el Juzgado de 1ª Instancia Civil y Comercial de 1º Nominación de la Ciudad de Córdoba en la causa <em>"CASANEGRA C/ LUXURY TRAVEL CORP S.R.L."</em>, resolviendo la resolución del contrato con indemnización económica y costas a cargo de la empresa demandada[cite: 4].
+                  </p>
+                  <div className="flex items-center gap-2 text-xs text-slate-400 font-mono bg-muted/50 p-2.5 rounded-lg border border-border/50">
+                    <Scale className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Publicado en el Boletín Oficial de CABA (Boletín N° 7253)[cite: 4]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tarjeta del Enlace Informativo */}
             <div className="p-6 bg-card border border-border/70 rounded-2xl shadow-sm hover:shadow-md transition-all">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-xl">
+                <div className="p-3 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-xl shrink-0">
                   <FileText className="w-6 h-6" />
                 </div>
                 <div className="flex-1">

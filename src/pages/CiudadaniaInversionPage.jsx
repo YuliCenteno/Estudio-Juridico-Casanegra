@@ -54,9 +54,14 @@ const EVALUATION_CRITERIA = [
 function CiudadaniaInversionPage() {
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'LegalService',
-    name: 'Estudio Jurídico Casanegra & Asociados',
+    '@type': 'Service',
+    name: 'Asesoramiento jurídico sobre ciudadanía argentina por inversión',
+    serviceType: 'Asesoramiento jurídico sobre ciudadanía argentina por inversión',
+    provider: {
+      '@id': 'https://estudiocasanegra.com/#legalservice'
+    },
     url: 'https://estudiocasanegra.com/ciudadania-argentina-por-inversion',
+    mainEntityOfPage: 'https://estudiocasanegra.com/ciudadania-argentina-por-inversion',
     areaServed: {
       '@type': 'City',
       name: 'Córdoba',
@@ -65,23 +70,18 @@ function CiudadaniaInversionPage() {
         name: 'Argentina'
       }
     },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'José Gigena 2058, Cerro de las Rosas',
-      addressLocality: 'Córdoba',
-      addressCountry: 'AR'
-    },
-    serviceType: 'Asesoramiento jurídico sobre ciudadanía argentina por inversión'
   };
 
   return (
     <>
       <Helmet>
-        <title>Ciudadanía por Inversión en Córdoba | Estudio Casanegra</title>
+        <title>
+          Ciudadanía Argentina por Inversión en Córdoba | Requisitos y Trámite
+        </title>
 
         <meta
           name="description"
-          content="Asesoramiento jurídico en Córdoba sobre ciudadanía argentina por inversión: modalidades, requisitos, evaluación de fondos y preparación del trámite."
+          content="Ciudadanía argentina por inversión: requisitos, aportes desde USD 350.000, evaluación y trámite según el Decreto 524/2025. Asesoramiento jurídico en Córdoba."
         />
 
         <link
@@ -91,14 +91,18 @@ function CiudadaniaInversionPage() {
 
         <meta
           property="og:title"
-          content="Ciudadanía por Inversión en Córdoba | Estudio Casanegra"
+          content="Ciudadanía Argentina por Inversión en Córdoba | Requisitos y Trámite"
         />
 
         <meta
           property="og:description"
-          content="Asesoramiento jurídico en Córdoba sobre ciudadanía argentina por inversión: modalidades, requisitos, evaluación de fondos y preparación del trámite."
+          content="Ciudadanía argentina por inversión: requisitos, aportes desde USD 350.000, evaluación y trámite según el Decreto 524/2025. Asesoramiento jurídico en Córdoba."
         />
 
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif"
+        />
         <meta
           property="og:url"
           content="https://estudiocasanegra.com/ciudadania-argentina-por-inversion"
@@ -112,14 +116,18 @@ function CiudadaniaInversionPage() {
         />
 
         <meta property="og:locale" content="es_AR" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Ciudadanía por Inversión en Córdoba | Estudio Casanegra"
+          content="Ciudadanía Argentina por Inversión en Córdoba | Requisitos y Trámite"
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif"
         />
         <meta
           name="twitter:description"
-          content="Asesoramiento jurídico en Córdoba sobre ciudadanía argentina por inversión: modalidades, requisitos, evaluación de fondos y preparación del trámite."
+          content="Ciudadanía argentina por inversión: requisitos, aportes desde USD 350.000, evaluación y trámite según el Decreto 524/2025. Asesoramiento jurídico en Córdoba."
         />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -473,6 +481,56 @@ function CiudadaniaInversionPage() {
           </div>
         </section>
 
+        {/* PROCEDIMIENTO DEL DECRETO 524/2025 */}
+        <section className="py-14 md:py-20 bg-muted">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto">
+              <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+                Normativa argentina
+              </span>
+
+              <h2 className="text-primary font-serif text-2xl md:text-3xl mt-4 mb-6">
+                Ciudadanía argentina por inversión: qué establece el Decreto
+                524/2025
+              </h2>
+
+              <div className="space-y-4 md:space-y-5 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Publicado en el Boletín Oficial el 31 de julio de 2025, el
+                  Decreto 524/2025 reglamenta el circuito de evaluación de las
+                  solicitudes de ciudadanía por inversión. La inversión debe
+                  cumplir los criterios de relevancia que establezca el
+                  Ministerio de Economía; realizar un aporte, por sí solo, no
+                  garantiza la aprobación.
+                </p>
+
+                <p>
+                  La Agencia de Programas de Ciudadanía por Inversión recibe la
+                  solicitud y analiza si la inversión reúne esos requisitos.
+                  Si los cumple, pide informes a los organismos competentes,
+                  entre ellos Seguridad, la Unidad de Información Financiera,
+                  el Registro Nacional de Reincidencia, RENAPER y la SIDE.
+                </p>
+
+                <p>
+                  Con esos antecedentes, la Agencia eleva una recomendación
+                  fundada a la Dirección Nacional de Migraciones. Migraciones
+                  toma la decisión final —aprobar o rechazar la solicitud
+                  mediante un acto fundado— dentro de los 30 días hábiles
+                  siguientes a recibir el informe de la Agencia.
+                </p>
+
+                <p>
+                  El decreto establece el procedimiento institucional, pero
+                  las condiciones de inversión y la documentación aplicable
+                  deben verificarse según la normativa vigente al momento de
+                  presentar cada solicitud.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ASESORAMIENTO */}
         <section className="py-14 md:py-20 bg-muted">
           <div className="container-custom">
@@ -537,19 +595,57 @@ function CiudadaniaInversionPage() {
                 </div>
 
                 <div className="mt-10 pt-8 border-t border-border/50">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Fuente de referencia:{' '}
-                    <a
-                      href="https://www.iprofesional.com/politica/438075-el-gobierno-lanza-un-programa-de-ciudadania-argentina-con-inversiones-desde-us350000"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Fuente externa: iProfesional"
-                      className="inline-flex items-center gap-1 text-primary hover:underline"
-                    >
-                      iProfesional
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </p>
+                  <div className="text-sm text-muted-foreground leading-relaxed">
+                    <h4 className="text-primary font-medium mb-3">
+                      Fuentes consultadas
+                    </h4>
+                    <ul className="flex flex-wrap gap-x-5 gap-y-2">
+                      <li>
+                        <a
+                          href="https://www.boletinoficial.gob.ar/detalleAviso/primera/329061/20250731"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:underline"
+                        >
+                          Decreto 524/2025 — Boletín Oficial
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.henleyglobal.com/es/citizenship-investment/argentina"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:underline"
+                        >
+                          Henley &amp; Partners
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://brons.com.ar/2026/10/05/argentina-pone-en-marcha-su-programa-de-ciudadania-por-inversion/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:underline"
+                        >
+                          Brons &amp; Salas
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.iprofesional.com/politica/438075-el-gobierno-lanza-un-programa-de-ciudadania-argentina-con-inversiones-desde-us350000"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:underline"
+                        >
+                          iProfesional
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
