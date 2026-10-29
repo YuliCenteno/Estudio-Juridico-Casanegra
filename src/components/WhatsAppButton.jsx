@@ -29,7 +29,7 @@ function WhatsAppButton() {
             aria-label="Contactar por WhatsApp"
           >
             <img 
-              src="https://horizons-cdn.hostinger.com/1d193b2b-0df5-4200-8ea5-f973af13e9b4/6f0e8b666251714b5d659969e039a942.png" 
+              src="https://res.cloudinary.com/crwsvgt8/image/upload/v1793313830/bbd0919b-c4cf-45af-a83a-21aef49a429b.png" 
               alt="WhatsApp" 
               className="w-14 h-14 object-contain"
             />

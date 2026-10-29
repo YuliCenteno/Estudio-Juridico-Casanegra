@@ -11,7 +11,7 @@ function NosotrosPage() {
     {
       name: 'Francisco Casanegra',
       title: 'Managing Partner',
-      image: 'https://horizons-cdn.hostinger.com/1d193b2b-0df5-4200-8ea5-f973af13e9b4/0c891f410a56b9db6274cd0ca92cefab.jpg',
+      image: 'https://res.cloudinary.com/crwsvgt8/image/upload/v1793313676/Francisco_casanegra.jpg',
       summary: 'Con una sólida trayectoria en derecho administrativo, ambiental y urbanístico, lidera la estrategia del estudio brindando asesoramiento integral a empresas, inversores y organismos públicos. Su experiencia en contrataciones, fideicomisos, proyectos de inversión y litigios complejos le permite ofrecer soluciones jurídicas innovadoras y de alto valor agregado.',
       background: [
         'Abogado – Universidad Nacional de Córdoba',
@@ -33,7 +33,7 @@ function NosotrosPage() {
     {
       name: 'Paula Casanegra',
       title: 'Socia',
-      image: 'https://horizons-cdn.hostinger.com/1d193b2b-0df5-4200-8ea5-f973af13e9b4/3f1aa342456fc1b171d7c638d9f43662.jpg',
+      image: 'https://res.cloudinary.com/crwsvgt8/image/upload/v1793313676/Paula_casanegra.jpg',
       summary: 'Especialista en ciudadanía italiana y española, migraciones y derecho internacional, combina su experiencia profesional con una extensa trayectoria en instituciones consulares y organismos italianos, brindando un acompañamiento cercano y eficiente en procesos migratorios y de obtención de ciudadanía.',
       background: [
         'Abogada – Universidad Empresarial Siglo 21',
