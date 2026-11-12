@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Route, Routes, BrowserRouter as Router, useLocation, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import ScrollToTop from './components/ScrollToTop';
+import RouteSeo from './components/RouteSeo';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -73,7 +74,7 @@ function App() {
         ref={audioRef}
         src="https://res.cloudinary.com/crwsvgt8/video/upload/v1787154884/Succession_Main_Title_Theme_-_Orchestral_Intro_Version.mp3"
         loop
-        preload="auto"
+        preload="none"
       />
       <ScrollToTop />
       <ScrollToHashElement />
@@ -111,12 +112,12 @@ function App() {
           path="/articulos/fallo-alianza-frente-civico-instituciones-democraticas"
           element={<FalloAlianzaFrenteCivicoPage />}
         />
+        <Route path="/articulos/tasa-estadistica" element={<ArticuloPage />} />
 
         {/* Landing Principal de Defensa del Consumidor */}
         <Route path="/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
         
-        {/* Captura genérica de artículos */}
-        <Route path="/articulos/:slug" element={<ArticuloPage />} />
+        <Route path="/articulos/:slug" element={<NotFoundPage />} />
 
         {/* Redirects para URLs antiguas */}
         <Route path="/ciudadanias" element={<Navigate to="/ciudadanias-migratorio#ciudadanias-extranjeras" replace />} />
@@ -128,6 +129,7 @@ function App() {
         
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <RouteSeo />
     </Router>
   );
 }

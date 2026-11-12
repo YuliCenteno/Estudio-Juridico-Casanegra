@@ -1,9 +1,20 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+
+    ErrorDocument 404 /404.html
+
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^ index.html [L]
+    RewriteRule ^(ciudadanias|migratorio|sobre-nosotros|areas-practica|derecho-inversor)/?$ index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^articulos/casanegra-c-luxury-travel-corp/?$ index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ - [R=404,L]
 </IfModule>
 
 <IfModule mod_headers.c>

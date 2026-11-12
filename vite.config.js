@@ -8,7 +8,8 @@ import sitePagesPlugin from './plugins/vite-plugin-site-pages.js';
 import pocketbaseAuthPlugin from './plugins/vite-plugin-pocketbase-auth.js';
 import sessionJournalPlugin from './plugins/session-journal/vite-plugin-session-journal.js';
 
-import { readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { getCanonicalUrl, seoPages, SHARE_IMAGE, SITE_URL } from './src/lib/seo-pages.js';
 
 const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
 const allDeps = Object.keys(pkg.dependencies || {});
@@ -296,6 +297,160 @@ if (window.navigation && window.self !== window.top) {
 }
 `;
 
+function escapeHtmlAttribute(value) {
+	return String(value)
+		.replace(/&/g, '&amp;')
+		.replace(/"/g, '&quot;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;');
+}
+
+function setMetaTag(html, attribute, value, content) {
+	const attributePattern = attribute.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+	const valuePattern = String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+	const tagPattern = new RegExp(
+		`<meta\\b(?=[^>]*\\b${attributePattern}\\s*=\\s*["']${valuePattern}["'])[^>]*>`,
+		'i',
+	);
+	const tag = `<meta ${attribute}="${escapeHtmlAttribute(value)}" content="${escapeHtmlAttribute(content)}" />`;
+
+	if (tagPattern.test(html)) {
+		return html.replace(tagPattern, tag);
+	}
+
+	return html.replace(/<\/head>/i, `\t${tag}\n</head>`);
+}
+
+function createRouteHtml(source, pathname, page) {
+	const canonicalUrl = getCanonicalUrl(pathname);
+	const image = page.image || SHARE_IMAGE;
+	let html = source.replace(
+		/<title>[\s\S]*?<\/title>/i,
+		`<title>${escapeHtmlAttribute(page.title)}</title>`,
+	);
+
+	[
+		['name', 'description', page.description],
+		['name', 'robots', 'index, follow, max-image-preview:large'],
+		['property', 'og:type', page.type || 'website'],
+		['property', 'og:url', canonicalUrl],
+		['property', 'og:title', page.title],
+		['property', 'og:description', page.description],
+		['property', 'og:image', image],
+		['property', 'og:image:alt', 'Estudio Jurídico Casanegra & Asociados'],
+		['property', 'og:image:secure_url', image],
+		['name', 'twitter:title', page.title],
+		['name', 'twitter:description', page.description],
+		['name', 'twitter:image', image],
+	].forEach(([attribute, value, content]) => {
+		html = setMetaTag(html, attribute, value, content);
+	});
+
+	const canonicalTag = `<link rel="canonical" href="${escapeHtmlAttribute(canonicalUrl)}" />`;
+	const canonicalPattern = /<link\b(?=[^>]*\brel\s*=\s*["']canonical["'])[^>]*>/i;
+	if (canonicalPattern.test(html)) {
+		html = html.replace(canonicalPattern, canonicalTag);
+	}
+
+	const pageUrl = `${SITE_URL}${pathname === '/' ? '/' : pathname}`;
+	const breadcrumb = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Inicio',
+				item: `${SITE_URL}/`,
+			},
+			...(pathname.startsWith('/articulos/')
+				? [{
+					'@type': 'ListItem',
+					position: 2,
+					name: 'Artículos',
+					item: `${SITE_URL}/articulos`,
+				}]
+				: []),
+			...(pathname !== '/'
+				? [{
+					'@type': 'ListItem',
+					position: pathname.startsWith('/articulos/') ? 3 : 2,
+					name: page.breadcrumb || page.title,
+					item: pageUrl,
+				}]
+				: []),
+		],
+	};
+
+	return html.replace(
+		'</head>',
+		`\t<script id="route-breadcrumb-schema" type="application/ld+json">${JSON.stringify(breadcrumb)}</script>\n</head>`,
+	);
+}
+
+function createNotFoundHtml(source) {
+	const title = 'Página no encontrada | Estudio Jurídico Casanegra';
+	const description = 'La página solicitada no se encuentra disponible.';
+	let html = source.replace(/<title>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
+
+	[
+		['name', 'description', description],
+		['name', 'robots', 'noindex, follow'],
+		['property', 'og:type', 'website'],
+		['property', 'og:url', `${SITE_URL}/404.html`],
+		['property', 'og:title', title],
+		['property', 'og:description', description],
+		['property', 'og:image', SHARE_IMAGE],
+		['property', 'og:image:alt', 'Estudio Jurídico Casanegra & Asociados'],
+		['property', 'og:image:secure_url', SHARE_IMAGE],
+		['name', 'twitter:title', title],
+		['name', 'twitter:description', description],
+		['name', 'twitter:image', SHARE_IMAGE],
+	].forEach(([attribute, value, content]) => {
+		html = setMetaTag(html, attribute, value, content);
+	});
+
+	html = html.replace(
+		/<link\b(?=[^>]*\brel\s*=\s*["']canonical["'])[^>]*>/i,
+		'',
+	);
+	return html;
+}
+
+const routeSeoPagesPlugin = {
+	name: 'route-seo-pages',
+	apply: 'build',
+	writeBundle(options) {
+		const outputDirectory = path.resolve(options.dir || 'dist');
+		const indexPath = path.resolve(outputDirectory, 'index.html');
+		if (!existsSync(indexPath)) {
+			throw new Error('Unable to generate route SEO pages: built index.html is missing.');
+		}
+		const indexHtml = readFileSync(indexPath, 'utf8');
+		writeFileSync(
+			indexPath,
+			createRouteHtml(indexHtml, '/', seoPages['/']),
+		);
+		writeFileSync(
+			path.resolve(outputDirectory, '404.html'),
+			createNotFoundHtml(indexHtml),
+		);
+
+		Object.entries(seoPages).forEach(([pathname, page]) => {
+			if (pathname === '/') {
+				return;
+			}
+
+			const routeDirectory = path.resolve(outputDirectory, pathname.slice(1));
+			mkdirSync(routeDirectory, { recursive: true });
+			writeFileSync(
+				path.resolve(routeDirectory, 'index.html'),
+				createRouteHtml(indexHtml, pathname, page),
+			);
+		});
+	},
+};
+
 const addTransformIndexHtml = {
 	name: 'add-transform-index-html',
 	transformIndexHtml(html) {
@@ -384,6 +539,7 @@ export default defineConfig({
         addTransformIndexHtml // <--- Ahora solo se inyecta durante desarrollo
     ] : []),
     react(),
+	routeSeoPagesPlugin,
 ],
 	server: {
 		port: 3000,

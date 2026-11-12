@@ -54,7 +54,7 @@ function Footer() {
                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   <Mail className="w-4 h-4 text-primary" />
                 </div>
-                <a href="mailto:contacto@casanegra.com.ar" className="hover:text-primary transition-colors">secretaria@estudiocasanegra.com</a>
+                <a href="mailto:secretaria@estudiocasanegra.com" className="hover:text-primary transition-colors">secretaria@estudiocasanegra.com</a>
               </li>
             </ul>
           </div>
