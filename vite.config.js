@@ -7,6 +7,7 @@ import iframeRouteRestorationPlugin from './plugins/vite-plugin-iframe-route-res
 import sitePagesPlugin from './plugins/vite-plugin-site-pages.js';
 import pocketbaseAuthPlugin from './plugins/vite-plugin-pocketbase-auth.js';
 import sessionJournalPlugin from './plugins/session-journal/vite-plugin-session-journal.js';
+import agentReadyPlugin from './plugins/vite-plugin-agent-ready.js';
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { getCanonicalUrl, seoPages, SHARE_IMAGE, SITE_URL } from './src/lib/seo-pages.js';
@@ -305,6 +306,22 @@ function escapeHtmlAttribute(value) {
 		.replace(/>/g, '&gt;');
 }
 
+function setRootHeading(html, heading, includeBusinessLinks = false) {
+	const rootPattern = /<div id=["']root["']>[\s\S]*?<\/div>/i;
+	if (!rootPattern.test(html)) {
+		throw new Error('Unable to generate route SEO pages: #root element is missing.');
+	}
+
+	const businessLinks = includeBusinessLinks
+		? '<nav aria-label="Enlaces institucionales"><a href="/nosotros">Nosotros</a><a href="/contacto">Contacto</a><a href="/terminos">Términos de uso</a></nav>'
+		: '';
+
+	return html.replace(
+		rootPattern,
+		`<div id="root"><h1>${escapeHtmlAttribute(heading)}</h1>${businessLinks}</div>`,
+	);
+}
+
 function setMetaTag(html, attribute, value, content) {
 	const attributePattern = attribute.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 	const valuePattern = String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -324,7 +341,7 @@ function setMetaTag(html, attribute, value, content) {
 function createRouteHtml(source, pathname, page) {
 	const canonicalUrl = getCanonicalUrl(pathname);
 	const image = page.image || SHARE_IMAGE;
-	let html = source.replace(
+	let html = setRootHeading(source, page.title, pathname === '/').replace(
 		/<title>[\s\S]*?<\/title>/i,
 		`<title>${escapeHtmlAttribute(page.title)}</title>`,
 	);
@@ -391,7 +408,7 @@ function createRouteHtml(source, pathname, page) {
 function createNotFoundHtml(source) {
 	const title = 'Página no encontrada | Estudio Jurídico Casanegra';
 	const description = 'La página solicitada no se encuentra disponible.';
-	let html = source.replace(/<title>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
+	let html = setRootHeading(source, title).replace(/<title>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
 
 	[
 		['name', 'description', description],
@@ -538,6 +555,7 @@ export default defineConfig({
         sessionJournalPlugin(),
         addTransformIndexHtml // <--- Ahora solo se inyecta durante desarrollo
     ] : []),
+    agentReadyPlugin(),
     react(),
 	routeSeoPagesPlugin,
 ],

@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter as Router, useLocation, Navigate } from 'r
 import { Toaster } from 'sonner';
 import ScrollToTop from './components/ScrollToTop';
 import RouteSeo from './components/RouteSeo';
+import WebMcpTools from './components/WebMcpTools';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -11,6 +12,7 @@ import ServicesPage from './pages/ServicesPage';
 import CitizenshipsAndMigrationPage from './pages/CitizenshipsAndMigrationPage';
 import InvestorPage from './pages/InvestorPage';
 import ContactPage from './pages/ContactPage';
+import TermsPage from './pages/TermsPage';
 import NosotrosPage from './pages/NosotrosPage';
 import ArticulosPage from './pages/ArticulosPage';
 import ArticuloPage from './pages/ArticuloPage';
@@ -78,6 +80,7 @@ function App() {
       />
       <ScrollToTop />
       <ScrollToHashElement />
+      <WebMcpTools />
       <Toaster
         position="top-right"
         richColors
@@ -94,6 +97,7 @@ function App() {
         <Route path="/ciudadania-argentina-por-inversion" element={<CiudadaniaInversionPage />} />
         <Route path="/inversiones" element={<InvestorPage />} />
         <Route path="/contacto" element={<ContactPage />} />
+        <Route path="/terminos" element={<TermsPage />} />
         <Route path="/articulos" element={<ArticulosPage />} />
         <Route
           path="/articulos/zurko-provincia-art-regulacion-honorarios"

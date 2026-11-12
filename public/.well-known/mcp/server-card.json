@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "version": "1.0",
+  "protocolVersion": "2025-11-25",
+  "serverInfo": {
+    "name": "estudiocasanegra.com",
+    "title": "Estudio Jurídico Casanegra & Asociados",
+    "version": "1.0.0"
+  },
+  "name": "estudiocasanegra/mcp",
+  "title": "Estudio Jurídico Casanegra & Asociados",
+  "description": "Read-only MCP endpoint for publicly listed contact information from Estudio Jurídico Casanegra & Asociados.",
+  "websiteUrl": "https://estudiocasanegra.com/",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://estudiocasanegra.com/mcp"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  }
+}

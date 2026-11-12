@@ -67,6 +67,7 @@ function Footer() {
               <li><Link to="/areas" className="text-muted-foreground hover:text-primary transition-colors">Areas de Practica</Link></li>
               <li><Link to="/articulos" className="text-muted-foreground hover:text-primary transition-colors">Articulos</Link></li>
               <li><Link to="/contacto" className="text-muted-foreground hover:text-primary transition-colors">Contacto</Link></li>
+              <li><Link to="/terminos" className="text-muted-foreground hover:text-primary transition-colors">Términos de uso</Link></li>
             </ul>
           </div>
           

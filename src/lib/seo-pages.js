@@ -51,6 +51,12 @@ export const seoPages = {
       'Contacte al Estudio Jurídico Casanegra & Asociados en Córdoba para realizar una consulta. Teléfonos, correo electrónico y ubicación.',
     breadcrumb: 'Contacto',
   },
+  '/terminos': {
+    title: 'Términos de uso | Estudio Jurídico Casanegra',
+    description:
+      'Términos de uso del sitio web del Estudio Jurídico Casanegra & Asociados.',
+    breadcrumb: 'Términos de uso',
+  },
   '/articulos': {
     title: 'Artículos jurídicos y jurisprudencia | Casanegra & Asociados',
     description:

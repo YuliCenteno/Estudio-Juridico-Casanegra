@@ -1,0 +1,24 @@
+# Estudio Jurídico Casanegra & Asociados
+
+> Sitio oficial del estudio jurídico con sede en Córdoba, Argentina.
+
+## Páginas principales
+- [Inicio](https://estudiocasanegra.com/): Estudio Jurídico Casanegra & Asociados. Asesoramiento legal especializado en derecho administrativo, ambiental, urbanístico, minero, migratorio e inversiones en Córdoba, Argentina.
+- [Nosotros](https://estudiocasanegra.com/nosotros): Conozca la historia y el equipo de Estudio Jurídico Casanegra & Asociados, firma legal con sede en Córdoba, Argentina.
+- [Áreas de práctica](https://estudiocasanegra.com/areas): Conozca las áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, minero, urbanístico, tributario, societario y más.
+- [Servicios jurídicos](https://estudiocasanegra.com/services): Asesoramiento jurídico preventivo y representación: consultas, dictámenes, mediaciones, reclamos, recursos administrativos y acciones judiciales.
+- [Contacto](https://estudiocasanegra.com/contacto): Contacte al Estudio Jurídico Casanegra & Asociados en Córdoba para realizar una consulta. Teléfonos, correo electrónico y ubicación.
+- [Términos de uso](https://estudiocasanegra.com/terminos): Términos de uso del sitio web del Estudio Jurídico Casanegra & Asociados.
+
+## Otras páginas
+- [Ciudadanías y migraciones](https://estudiocasanegra.com/ciudadanias-migratorio): Asesoramiento en ciudadanías italiana y española, residencias, visas y trámites migratorios en Argentina, con atención desde Córdoba.
+- [Ciudadanía por inversión](https://estudiocasanegra.com/ciudadania-argentina-por-inversion): Información y asesoramiento jurídico sobre el procedimiento de ciudadanía argentina por inversión previsto por el Decreto 524/2025.
+- [Inversiones](https://estudiocasanegra.com/inversiones): Asesoramiento jurídico para inversiones, fideicomisos, protección patrimonial y proyectos de inversión desde Córdoba, Argentina.
+- [Artículos](https://estudiocasanegra.com/articulos): Artículos, análisis jurídicos y publicaciones sobre derecho aduanero, administrativo, ambiental, migratorio, inversiones y otras áreas.
+- [Defensa del consumidor](https://estudiocasanegra.com/defensa-del-consumidor): Asesoramiento y patrocinio jurídico en defensa de consumidores y usuarios ante incumplimientos contractuales y prácticas comerciales.
+- [Tasa de estadística](https://estudiocasanegra.com/articulos/tasa-estadistica): Análisis jurídico de la tasa de estadística argentina, su naturaleza tributaria y la reserva de ley en materia aduanera.
+- [Alianza Frente Cívico](https://estudiocasanegra.com/articulos/fallo-alianza-frente-civico-instituciones-democraticas): Análisis jurídico del fallo del Tribunal Superior de Justicia de Córdoba sobre escrutinio, procesos electorales e instituciones democráticas.
+- [Zurko c/ Provincia ART](https://estudiocasanegra.com/articulos/zurko-provincia-art-regulacion-honorarios): Reseña del fallo de la Cámara de Apelaciones en lo Civil y Comercial de Córdoba sobre honorarios por actuación ante comisiones médicas.
+- [Fake news y responsabilidad](https://estudiocasanegra.com/articulos/fake-news-responsabilidad-medios-buscadores-redes): Síntesis jurídica sobre fake news, identidad digital, derecho al honor y responsabilidad de medios, buscadores y redes sociales.
+- [Amparo por fecundación in vitro](https://estudiocasanegra.com/articulos/amparo-cobertura-fecundacion-in-vitro): Nota sobre un amparo presentado en Córdoba para solicitar la cobertura de un tratamiento de fecundación in vitro, publicada por LA NACIÓN.
+- [Laudo arbitral Bamboo DeFi](https://estudiocasanegra.com/articulos/bamboo-defi): Doctrina sobre el laudo arbitral Bamboo DeFi, las finanzas descentralizadas, los tokens de gobernanza y la resolución de conflictos.

@@ -4,6 +4,12 @@
 
     ErrorDocument 404 /404.html
 
+    RewriteCond %{HTTP:Accept} text/markdown [NC]
+    RewriteCond %{HTTP:Accept} !text/markdown\s*;\s*q=0(?:\.0*)?(?:\s*,|\s*$) [NC]
+    RewriteRule ^$ index.md [T=text/markdown,L]
+
+    RewriteRule ^mcp/?$ mcp.php [L]
+
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(ciudadanias|migratorio|sobre-nosotros|areas-practica|derecho-inversor)/?$ index.html [L]
@@ -17,9 +23,26 @@
     RewriteRule ^ - [R=404,L]
 </IfModule>
 
+<IfModule mod_mime.c>
+    AddType text/markdown .md
+</IfModule>
+
 <IfModule mod_headers.c>
     # Cache everything on CDN by default
     Header set Cache-Control "public, s-maxage=604800, max-age=0"
+
+    <If "%{REQUEST_URI} == '/'">
+        Header set Link "<https://estudiocasanegra.com/index.md>; rel=\"alternate\"; type=\"text/markdown\", <https://estudiocasanegra.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\", <https://estudiocasanegra.com/.well-known/mcp/server-card.json>; rel=\"mcp-server-card\"; type=\"application/json\""
+        Header merge Vary Accept
+    </If>
+
+    <If "%{REQUEST_URI} == '/mcp'">
+        Header set Cache-Control "no-store"
+    </If>
+
+    <If "%{REQUEST_URI} == '/.well-known/mcp/server-card.json'">
+        Header set Access-Control-Allow-Origin "*"
+    </If>
 
     # Cache in browser all assets
     <If "%{REQUEST_URI} =~ m#^/assets/.*$#">
