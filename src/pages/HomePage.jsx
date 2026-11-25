@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Building2, Leaf, Handshake, Map, Award, ShoppingBag, Globe2, Landmark, TrendingUp, ArrowRight, Users, Wallet, Briefcase, Scale, Ship 
+  Building2, Leaf, Handshake, Map, ShoppingBag, Globe2, Landmark, TrendingUp, ArrowRight, Users, Wallet, Briefcase, Scale, Ship, Home 
 } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -12,30 +12,157 @@ import PracticeAreaCard from '@/components/PracticeAreaCard.jsx';
 
 function HomePage() {
   const areas = [
-    { icon: Building2, title: 'Derecho Administrativo', link: '/areas#derecho-administrativo' },
-    { icon: Leaf, title: 'Derecho Ambiental', link: '/areas#derecho-ambiental' },
-    { icon: Users, title: 'Derecho Societario', link: '/areas#derecho-societario' },
-    { icon: TrendingUp, title: 'Derecho del Inversor', link: '/areas#derecho-del-inversor' },
-    { icon: Map, title: 'Derecho Urbanístico', link: '/areas#derecho-urbanistico' },
-    { icon: Globe2, title: 'Migraciones', link: '/ciudadanias-migratorio#derecho-migratorio' },
-    { icon: Landmark, title: 'Ciudadanías', link: '/ciudadanias-migratorio#ciudadanias-extranjeras' },
-    { icon: Wallet, title: 'Cobranzas', link: '/areas#cobranzas' },
-    { icon: Briefcase, title: 'Derecho Concursal', link: '/areas#derecho-concursal' },
-    { icon: Scale, title: 'Derecho Penal', link: '/areas#derecho-penal' },
-    { icon: Ship, title: 'Derecho Aduanero', link: '/areas#derecho-aduanero' },
-    { icon: ShoppingBag, title: 'Derecho del Consumo', link: '/areas#derecho-del-consumo' },
-    { icon: Handshake, title: 'Lealtad Comercial', link: '/areas#lealtad-comercial' },
+    {
+      icon: Building2,
+      title: 'Derecho Administrativo',
+      link: '/areas#derecho-administrativo',
+      color: '#1e3a8a',
+      iconBg: 'bg-blue-950/10',
+      iconText: 'text-blue-900',
+      hoverBg: 'group-hover:bg-blue-900',
+      borderAccent: 'border-blue-900/25',
+    },
+    {
+      icon: Leaf,
+      title: 'Derecho Ambiental',
+      link: '/areas#derecho-ambiental',
+      color: '#15803d',
+      iconBg: 'bg-emerald-950/10',
+      iconText: 'text-emerald-800',
+      hoverBg: 'group-hover:bg-emerald-800',
+      borderAccent: 'border-emerald-800/25',
+    },
+    {
+      icon: Users,
+      title: 'Derecho Societario',
+      link: '/areas#derecho-societario',
+      color: '#1d4ed8',
+      iconBg: 'bg-blue-950/10',
+      iconText: 'text-blue-700',
+      hoverBg: 'group-hover:bg-blue-700',
+      borderAccent: 'border-blue-700/25',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Derecho del Inversor',
+      link: '/areas#derecho-del-inversor',
+      color: '#a16207',
+      iconBg: 'bg-yellow-950/10',
+      iconText: 'text-yellow-800',
+      hoverBg: 'group-hover:bg-yellow-800',
+      borderAccent: 'border-yellow-800/25',
+    },
+    {
+      icon: Map,
+      title: 'Derecho Urbanístico',
+      link: '/areas#derecho-urbanistico',
+      color: '#3730a3',
+      iconBg: 'bg-indigo-950/10',
+      iconText: 'text-indigo-800',
+      hoverBg: 'group-hover:bg-indigo-800',
+      borderAccent: 'border-indigo-800/25',
+    },
+    {
+      icon: Home,
+      title: 'Derecho Inmobiliario',
+      link: '/derecho-inmobiliario',
+      color: '#9a3412',
+      iconBg: 'bg-orange-950/10',
+      iconText: 'text-orange-800',
+      hoverBg: 'group-hover:bg-orange-800',
+      borderAccent: 'border-orange-800/25',
+    },
+    {
+      icon: Globe2,
+      title: 'Migraciones',
+      link: '/ciudadanias-migratorio#derecho-migratorio',
+      color: '#0369a1',
+      iconBg: 'bg-sky-950/10',
+      iconText: 'text-sky-800',
+      hoverBg: 'group-hover:bg-sky-800',
+      borderAccent: 'border-sky-800/25',
+    },
+    {
+      icon: Landmark,
+      title: 'Ciudadanías',
+      link: '/ciudadanias-migratorio#ciudadanias-extranjeras',
+      color: '#0369a1',
+      iconBg: 'bg-sky-950/10',
+      iconText: 'text-sky-800',
+      hoverBg: 'group-hover:bg-sky-800',
+      borderAccent: 'border-sky-800/25',
+    },
+    {
+      icon: Wallet,
+      title: 'Cobranzas',
+      link: '/areas#cobranzas',
+      color: '#0f766e',
+      iconBg: 'bg-teal-950/10',
+      iconText: 'text-teal-800',
+      hoverBg: 'group-hover:bg-teal-800',
+      borderAccent: 'border-teal-800/25',
+    },
+    {
+      icon: Briefcase,
+      title: 'Derecho Concursal',
+      link: '/areas#derecho-concursal',
+      color: '#334155',
+      iconBg: 'bg-slate-900/10',
+      iconText: 'text-slate-700',
+      hoverBg: 'group-hover:bg-slate-700',
+      borderAccent: 'border-slate-700/25',
+    },
+    {
+      icon: Scale,
+      title: 'Derecho Penal',
+      link: '/areas#derecho-penal',
+      color: '#881337',
+      iconBg: 'bg-rose-950/10',
+      iconText: 'text-rose-900',
+      hoverBg: 'group-hover:bg-rose-900',
+      borderAccent: 'border-rose-900/25',
+    },
+    {
+      icon: Ship,
+      title: 'Derecho Aduanero',
+      link: '/areas#derecho-aduanero',
+      color: '#1e40af',
+      iconBg: 'bg-blue-950/10',
+      iconText: 'text-blue-800',
+      hoverBg: 'group-hover:bg-blue-800',
+      borderAccent: 'border-blue-800/25',
+    },
+    {
+      icon: ShoppingBag,
+      title: 'Derecho del Consumo',
+      link: '/areas#derecho-del-consumo',
+      color: '#be123c',
+      iconBg: 'bg-rose-950/10',
+      iconText: 'text-rose-700',
+      hoverBg: 'group-hover:bg-rose-700',
+      borderAccent: 'border-rose-700/25',
+    },
+    {
+      icon: Handshake,
+      title: 'Lealtad Comercial',
+      link: '/areas#lealtad-comercial',
+      color: '#4d7c0f',
+      iconBg: 'bg-lime-950/10',
+      iconText: 'text-lime-800',
+      hoverBg: 'group-hover:bg-lime-800',
+      borderAccent: 'border-lime-800/25',
+    },
   ];
 
   return (
     <>
       <Helmet>
         <title>Abogados en Córdoba | Estudio Jurídico Casanegra</title>
-        <meta name="description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanía por inversión y derecho del inversor." />
+        <meta name="description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, inmobiliario, migratorio, ciudadanía por inversión y derecho del inversor." />
         <link rel="canonical" href="https://estudiocasanegra.com/" />
         
         <meta property="og:title" content="Abogados en Córdoba | Estudio Jurídico Casanegra & Asociados" />
-        <meta property="og:description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanía por inversión y derecho del inversor." />
+        <meta property="og:description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, inmobiliario, migratorio, ciudadanía por inversión y derecho del inversor." />
         <meta property="og:image" content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif" />
         <meta property="og:url" content="https://estudiocasanegra.com/" />
         <meta property="og:type" content="website" />
@@ -44,7 +171,7 @@ function HomePage() {
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Abogados en Córdoba | Estudio Jurídico Casanegra & Asociados" />
-        <meta name="twitter:description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, minero, migratorio, ciudadanía por inversión y derecho del inversor." />
+        <meta name="twitter:description" content="Abogados en Córdoba: asesoramiento jurídico en derecho administrativo, ambiental, urbanístico, inmobiliario, migratorio, ciudadanía por inversión y derecho del inversor." />
         <meta name="twitter:image" content="https://res.cloudinary.com/crwsvgt8/image/upload/v1787164743/photo-1558052643-9a9e9ea8e50a.avif" />
         
       </Helmet>
@@ -75,6 +202,11 @@ function HomePage() {
                   icon={area.icon}
                   title={area.title}
                   linkTo={area.link}
+                  color={area.color}
+                  iconBg={area.iconBg}
+                  iconText={area.iconText}
+                  hoverBg={area.hoverBg}
+                  borderAccent={area.borderAccent}
                   delay={index * 0.1}
                 />
               ))}
@@ -86,41 +218,41 @@ function HomePage() {
               </Link>
             </div>
             <section className="mt-20">
-  <div className="max-w-6xl mx-auto">
-    <div className="relative overflow-hidden rounded-2xl bg-card p-8 md:p-12 shadow-sm border border-border/50">
-      
-      <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3" />
+              <div className="max-w-6xl mx-auto">
+                <div className="relative overflow-hidden rounded-2xl bg-card p-8 md:p-12 shadow-sm border border-border/50">
+                  
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3" />
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center">
-        <div>
-          <span className="inline-block text-xs md:text-sm tracking-[0.2em] uppercase text-white/70 font-medium mb-4">
-            Servicio especializado
-          </span>
+                  <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center">
+                    <div>
+                      <span className="inline-block text-xs md:text-sm tracking-[0.2em] uppercase text-white/70 font-medium mb-4">
+                        Servicio especializado
+                      </span>
 
-          <h2 className="font-serif text-white mb-4">
-            Ciudadanía Argentina por Inversión
-          </h2>
+                      <h2 className="font-serif text-white mb-4">
+                        Ciudadanía Argentina por Inversión
+                      </h2>
 
-          <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-3xl font-light">
-            Asesoramiento jurídico especializado para quienes buscan acceder a la ciudadanía argentina mediante inversión.
-          </p>
-        </div>
+                      <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-3xl font-light">
+                        Asesoramiento jurídico especializado para quienes buscan acceder a la ciudadanía argentina mediante inversión.
+                      </p>
+                    </div>
 
-        <div>
-          <Link
-            to="/ciudadania-argentina-por-inversion"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-primary-foreground font-medium hover:bg-white/90 transition-colors whitespace-nowrap"
-          >
-            Conocer más
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
-        </div>
-      </div>
+                    <div>
+                      <Link
+                        to="/ciudadania-argentina-por-inversion"
+                        className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-primary-foreground font-medium hover:bg-white/90 transition-colors whitespace-nowrap"
+                      >
+                        Conocer más
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
 
-    </div>
-  </div>
-</section>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
 

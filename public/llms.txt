@@ -3,14 +3,15 @@
 > Sitio oficial del estudio jurídico con sede en Córdoba, Argentina.
 
 ## Páginas principales
-- [Inicio](https://estudiocasanegra.com/): Estudio Jurídico Casanegra & Asociados. Asesoramiento legal especializado en derecho administrativo, ambiental, urbanístico, minero, migratorio e inversiones en Córdoba, Argentina.
+- [Inicio](https://estudiocasanegra.com/): Estudio Jurídico Casanegra & Asociados. Asesoramiento legal especializado en derecho administrativo, ambiental, urbanístico, inmobiliario, minero, migratorio e inversiones en Córdoba, Argentina.
 - [Nosotros](https://estudiocasanegra.com/nosotros): Conozca la historia y el equipo de Estudio Jurídico Casanegra & Asociados, firma legal con sede en Córdoba, Argentina.
-- [Áreas de práctica](https://estudiocasanegra.com/areas): Conozca las áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, minero, urbanístico, tributario, societario y más.
+- [Áreas de práctica](https://estudiocasanegra.com/areas): Conozca las áreas de práctica del Estudio Jurídico Casanegra: derecho administrativo, ambiental, inmobiliario, minero, urbanístico, tributario, societario y más.
 - [Servicios jurídicos](https://estudiocasanegra.com/services): Asesoramiento jurídico preventivo y representación: consultas, dictámenes, mediaciones, reclamos, recursos administrativos y acciones judiciales.
 - [Contacto](https://estudiocasanegra.com/contacto): Contacte al Estudio Jurídico Casanegra & Asociados en Córdoba para realizar una consulta. Teléfonos, correo electrónico y ubicación.
 - [Términos de uso](https://estudiocasanegra.com/terminos): Términos de uso del sitio web del Estudio Jurídico Casanegra & Asociados.
 
 ## Otras páginas
+- [Derecho inmobiliario](https://estudiocasanegra.com/derecho-inmobiliario): Asesoramiento jurídico en régimen jurídico de los inmuebles (compraventa, fideicomisos, consorcios, acciones reales y posesorias, usucapión, restricciones ambientales y administrativas, expropiaciones) y urbanizaciones y barrios cerrados en Córdoba, Argentina.
 - [Ciudadanías y migraciones](https://estudiocasanegra.com/ciudadanias-migratorio): Asesoramiento en ciudadanías italiana y española, residencias, visas y trámites migratorios en Argentina, con atención desde Córdoba.
 - [Ciudadanía por inversión](https://estudiocasanegra.com/ciudadania-argentina-por-inversion): Información y asesoramiento jurídico sobre el procedimiento de ciudadanía argentina por inversión previsto por el Decreto 524/2025.
 - [Inversiones](https://estudiocasanegra.com/inversiones): Asesoramiento jurídico para inversiones, fideicomisos, protección patrimonial y proyectos de inversión desde Córdoba, Argentina.

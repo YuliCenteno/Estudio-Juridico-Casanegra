@@ -18,6 +18,7 @@ import ArticulosPage from './pages/ArticulosPage';
 import ArticuloPage from './pages/ArticuloPage';
 import CiudadaniaInversionPage from './pages/CiudadaniaInversionPage';
 import DefensaConsumidorPage from './pages/DefensaConsumidorPage';
+import DerechoInmobiliarioPage from './pages/DerechoInmobiliarioPage';
 import BambooDefiPage from './pages/BambooDefiPage';
 import AmparoFecundacionInVitroPage from './pages/AmparoFecundacionInVitroPage';
 import FakeNews from './pages/FakeNews';
@@ -120,6 +121,9 @@ function App() {
 
         {/* Landing Principal de Defensa del Consumidor */}
         <Route path="/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
+
+        {/* Página Principal de Derecho Inmobiliario */}
+        <Route path="/derecho-inmobiliario" element={<DerechoInmobiliarioPage />} />
         
         <Route path="/articulos/:slug" element={<NotFoundPage />} />
 
